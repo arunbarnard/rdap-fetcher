@@ -8,6 +8,8 @@ Including:
 * Description
 * Registration Address
 
+This is achieved by fetching the RDAP data (new and improved version of WhoIs?) and presenting the most useful and relevant information in a web interface.
+
 ## Download
 
 To get the script, either download the .zip or:
