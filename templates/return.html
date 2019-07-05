@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RDAP Fetcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <h2 id="info">{{ ipaddress }}</h2>
+    <h4 id="country"><b>Country of Registration:</b> {{ country }}</h4>
+    <h4 id="owner"><b>Owner of Domain:</b> {{ owner }}</h4>
+    <h4 id="description"><b>Description:</b> {{ description }}</h4>
+    <h4 id="address"><b>Address: </b><a href="http://maps.google.com/?q='+{{ address }}'">Google Maps</a></h4>
+    <a href="{{ url_for('static', filename='data.txt') }}" download="RDAPfile">
+    <h4>Download full RDAP JSON file here</h4>
+    </a>
+    <br>
+    <h4>Check another: </h4>
+    <form method="POST">
+        <input name="number">
+        <input type="submit">
+    </form>
+    <h3>Some data may be incorrect due to WhoIs/RDAP protection issued by the domain name provider.</h3>
+</body>
+</html>
